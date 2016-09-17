@@ -399,7 +399,7 @@ footer ul li a.active {
 .bg-primary {
   background: #fdcc52;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#a143e9, #7732ad);
+  background: linear-gradient(black, black);
  {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;

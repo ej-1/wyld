@@ -10,6 +10,330 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
  *= require_tree .
  *= require_self
  */
+
+@import "twitter/bootstrap/glyphicons";
+
+
+/* To make round buttons */
+.btn {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 300px;
+}
+.btn-xl {
+  padding: 15px 45px;
+  font-size: 11px;
+}
+.btn-outline {
+  background: linear-gradient(to top, #dc2430, #7b4397);
+  color: white !important;
+  border: none;
+  /* border-color: white;
+  border: 1px solid;*/
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+  color: white;
+  background: linear-gradient(to top, #ce1f2a, #6c3986);
+  /* border-color: #fdcc52; */
+}
+/* End of comment - To make round buttons */
+
+
+.fa-heart-o {
+  color: #ffc600 !important;
+}
+
+.fullscreen-bg {
+  background-color: #000;
+}
+
+.fullscreen-bg-info {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+}
+
+.fullscreen-bg-info img {
+  width: 75%;
+}
+
+.fullscreen-bg-sponsor {
+  background: black;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fullscreen-bg-sponsor img {
+  width: 100%;
+  position: relative;
+  filter: brightness(45%);
+}
+
+.header-content-inner h1 {
+  color: #fff;
+}
+
+.header-content {
+  margin-top: -80%;
+}
+
+.fullscreen-bg__video {
+  width: 100%;
+}
+
+.user-type-info-circle {
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 150px;
+  margin: 35px;
+  padding: 50px;
+  cursor: pointer;
+  color: rgb(92, 92, 92);
+} 
+
+.user-type-info-circle h3{
+  color: rgb(92, 92, 92);
+} 
+
+
+.user-type-info-circle p {
+  color: rgb(92, 92, 92);
+} 
+
+
+.info-dropdown-box {
+  text-align: left;
+  margin-top: 70px;
+}
+
+.hidden-info-box {
+  display: none;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  color: gold;
+}
+
+
+#user_email {
+  width: 250px;
+}
+
+
+h1 {
+  font-family: didot;
+}
+
+h2 {
+  color: #fff;
+}
+
+h3 {
+  margin-top: 37px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.wyld-word {
+  font-family: 'Monoton', cursive;
+  font-weight: normal;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#dc2430, #7b4397);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wyld-word-small {
+  font-family: 'Monoton', cursive;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.logo-box {
+  margin-top: -40%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.logo-box img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-brand {
+font-family: 'Monoton', cursive !important;
+    font-weight: normal;
+    font-size: 25px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.info-dropdown-box h4 {
+  line-height: 65px;
+}
+
+.text-section-break {
+  margin-top: 50px;
+}
+
+.aboutus-text {
+  text-align: left;
+  margin-left: 50px;
+  font-size: 19px;
+  font-weight: 100;
+}
+
+
+.features {
+  background: linear-gradient(to top, #dc2430, #7b4397);
+}
+
+.features .container {
+  margin-top: -50px;
+}
+
+
+.text-muted {
+  color: #fff;
+}
+
+footer {
+  background-color: #dc2430;
+}
+
+
+section.features .section-heading {
+    margin-bottom: 25px;
+    margin-top: 75px;
+}
+
+.form-control {
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.bg-contact {
+  background-color: #dc2430;
+}
+
+
+
+@media screen and (max-width: 991px) and (max-width: 769px) {
+
+  .fullscreen-bg-info img {
+    width: 100%;
+    filter: brightness(45%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .fullscreen-bg__video {
+    width: 200%;
+  }
+
+  .fullscreen-bg {
+   overflow: hidden;
+  }
+
+
+
+  .logo-box {
+    margin-top: -70%;
+  }
+
+  .logo-box h2 {
+    font-size: 18px;
+  }
+
+}
+
+
+@media screen and (min-width: 991px) {
+
+  .btn-warning {
+      margin-top: -5px !important;
+  } 
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+  .user-type-info-circle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  } 
+
+  .btn-warning {
+      margin-top: 10px !important;
+  } 
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+
+  .user-type-info-circle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  } 
+
+  .btn-warning {
+      margin-top: 10px !important;
+  } 
+
+  .aboutus-text {
+    margin-left: 25px;
+  } 
+
+  .header-content {
+    margin-top: -50%;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+  .user-type-info-circle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 260px;
+    height: 260px;
+    padding: 30px;
+  } 
+
+  .btn-warning {
+      margin-top: 10px !important;
+  } 
+
+  .aboutus-text {
+    margin-left: 25px;
+  } 
+
+  .header-content {
+    margin-top: -40%;
+  }
+
+  .fullscreen-bg-sponsor {
+    width: 200%;
+    overflow: hidden;
+  } 
+}

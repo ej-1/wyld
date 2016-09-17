@@ -14,19 +14,14 @@
       </div>
     </div>
   <% end %>
+  <div>
+      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
 
-  <div class="form-group">
-    <%= f.label :email, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :email, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:email) %>
+      <%= f.submit 'Sign up', :class => 'btn btn-warning' %>
   </div>
 
-  <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-    </div>
-  </div>
+
+
+
 
 <% end %>
