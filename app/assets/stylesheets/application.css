@@ -16,7 +16,9 @@
  */
 
 
-
+.page-scroll-wyld {
+  cursor: pointer;
+}
 
 /* To make round buttons */
 .btn {
@@ -67,14 +69,13 @@
 
 .fullscreen-bg-sponsor {
   background: black;
-  width: 100%;
   overflow: hidden;
 }
 
 .fullscreen-bg-sponsor img {
-  width: 100%;
   position: relative;
   filter: brightness(45%);
+  width: 100%;
 }
 
 .header-content-inner h1 {
@@ -329,11 +330,15 @@ section.features .section-heading {
   } 
 
   .header-content {
-    margin-top: -40%;
+    margin-top: -90%;
   }
 
   .fullscreen-bg-sponsor {
-    width: 200%;
     overflow: hidden;
+  } 
+
+.fullscreen-bg-sponsor img {
+    width: 200%;
+    max-width: 200%;
   } 
 }
