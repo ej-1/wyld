@@ -16,11 +16,31 @@
  */
 
 
+.bullet-point-text {
+    display: block;
+    margin-top: -44px;
+    margin-left: 63px;
+    margin-bottom: 4px;
+    line-height: 40px;
+}
+
+
+.fa-check {
+  margin-right: 10px;
+}
+
 .page-scroll-wyld {
   cursor: pointer;
 }
 
 /* To make round buttons */
+
+.btn-warning {
+  background: linear-gradient(to top, #ff9000, #ffd800);
+  color: white !important;
+  border: none;
+}
+
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;
@@ -32,7 +52,7 @@
   font-size: 11px;
 }
 .btn-outline {
-  background: linear-gradient(to top, #dc2430, #7b4397);
+  background: linear-gradient(to top, #ff9000, #ffd800);
   color: white !important;
   border: none;
   /* border-color: white;
@@ -43,7 +63,7 @@
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background: linear-gradient(to top, #ce1f2a, #6c3986);
+  background: linear-gradient(to top, #e98300, #e7c400);
   /* border-color: #fdcc52; */
 }
 /* End of comment - To make round buttons */
@@ -79,7 +99,7 @@
 }
 
 .header-content-inner h1 {
-  color: #fff;
+  color: gold;
 }
 
 .header-content {
@@ -187,7 +207,8 @@ a {
 }
 
 .info-dropdown-box h4 {
-  line-height: 65px;
+  line-height: 47px;
+  font-family: URW Gothic L;
 }
 
 .text-section-break {
@@ -203,7 +224,9 @@ a {
 
 
 .features {
-  background: linear-gradient(to top, #dc2430, #7b4397);
+  /* background: linear-gradient(to top, #dc2430, #7b4397); */
+  background: linear-gradient(to top, #ff6c00, gold);
+  min-height: 70%;
 }
 
 .features .container {
@@ -216,7 +239,7 @@ a {
 }
 
 footer {
-  background-color: #dc2430;
+  background-color: #ff6c00;
 }
 
 
@@ -231,9 +254,13 @@ section.features .section-heading {
 }
 
 .bg-contact {
-  background-color: #dc2430;
+  background-color: #ff6c00;
 }
 
+.show-more {
+  color: gold;
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 991px) and (max-width: 769px) {

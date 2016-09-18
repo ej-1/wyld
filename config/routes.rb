@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'host' => 'users#host_page'
   get 'entrepreneur' => 'users#entrepreneur_page'
   get 'confirmation' => 'users#confirmation_page'
+  get 'imprint' => 'users#imprint'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

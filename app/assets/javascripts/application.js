@@ -18,14 +18,28 @@
 
 
 $( document ).ready(function() {
-  $( ".fa-chevron-down" ).click(function() {
-    $(".hidden-info-box").slideUp( "slow", function() {
+
+
+
+  $( ".show-more" ).click(function() {
+    var text = this.innerHTML
+
+        if (text == " more") {
+          $( ".show-more" ).html(" more");
+            this.innerHTML = " less";
+        } else {
+            this.innerHTML = " more";        
+        }
+
+    $(this).closest(".info-dropdown-box").siblings(".info-dropdown-box").children(".hidden-info-box").slideUp( "slow", function() {
       // Animation complete.
     });
      $(this).closest(".info-dropdown-box").children(".hidden-info-box").slideToggle( "slow", function() {
       // Animation complete.
     });
 	});
+
+
 
 $(".user-type-info-circle").hover(function(){
     $(this).css("background-color", "#f2dede").children();
@@ -38,6 +52,13 @@ $(".user-type-info-circle").click(function() {
   return false;
 });
 
+
+        var current_url = window.location.href
+        if (current_url === "http://localhost:3000/imprint") {
+          $('.page-scroll').hide(); 
+        } else {
+
+        }
 
 
 
