@@ -10,8 +10,9 @@
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <h1>Thank you for signing up!</h1>
-                            <h2>Please confirm your email by clicking the confirmation link in the mail you received.</h2>
+                        	  <h1><% flash.each do |name, msg| %>
+    							<%= content_tag :div, msg, class: "" %>
+  								<% end %></h1>
                         </div>
                     </div>
                 </div>

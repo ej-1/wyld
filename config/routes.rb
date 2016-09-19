@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users do
+      member do
+        get :confirm_email
+      end
+    end
   root 'users#about'
   get 'about' => 'users#about'
   get 'sponsor' => 'users#sponsor_page'
   get 'host' => 'users#host_page'
   get 'entrepreneur' => 'users#entrepreneur_page'
   get 'confirmation' => 'users#confirmation_page'
+  get 'confirmed_email' => 'users#confirmed_email_page'
   get 'imprint' => 'users#imprint'
 
   # The priority is based upon order of creation: first created -> highest priority.

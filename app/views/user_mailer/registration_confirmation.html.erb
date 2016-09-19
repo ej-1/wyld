@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome <%= @user.email %></h1>
+    <p>
+      Thank you for signing up to WYLD!
+    </p>
+    <p>
+      Please confirm your email by clicking the link below.
+    </p>
+    <%= confirm_email_user_url(@user.confirm_token) %>
+  </body>
+</html>

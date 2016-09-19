@@ -1,0 +1,6 @@
+Hi <%= @user.email %>
+
+Thank you for signing up to WYLD!
+Please confirm your email by clicking the link below.
+
+<%= confirm_email_user_url(@user.confirm_token) %>

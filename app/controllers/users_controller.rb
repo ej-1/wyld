@@ -21,15 +21,28 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def confirm_email
+    user = User.find_by_confirm_token(params[:id])
+    if user
+      email_activate(user)
+      flash[:success] = "Your email has been confirmed."
+      redirect_to '/confirmed_email'
+    else
+      flash[:error] = "Sorry. Email does not exist"
+      redirect_to '/confirmed_email'
+    end
+  end
+
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
-        format.html { redirect_to '/confirmation', notice: 'User was successfully created.' }
-        #format.html { redirect_to @user, notice: 'User was successfully created.' }
+        # Sends email to user when user is created.
+        UserMailer.registration_confirmation(@user).deliver
+
+        format.html { redirect_to '/confirmation' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -37,6 +50,7 @@ class UsersController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -63,6 +77,13 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def email_activate(user)
+      user.email_confirmed = true
+      #user.confirm_token = nil
+      user.save!(:validate => false)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
