@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "devise"
 gem "mail"
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
