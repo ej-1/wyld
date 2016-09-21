@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail address"
+        checkbox_ticked: ""
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "is required"
+            checkbox_ticked:
+              blank: "You must confirm your user type by ticking the checkbox"

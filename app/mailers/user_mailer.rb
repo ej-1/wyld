@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def registration_confirmation(user)
     @user = user
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
-    mail(:to => @user.email, :subject => "Registered")
+    mail(:to => @user.email, :subject => "Wyld | Confirm your email address ")
   end
 
 	#def welcome_email(user)

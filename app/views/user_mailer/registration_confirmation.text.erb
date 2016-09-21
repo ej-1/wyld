@@ -1,6 +1,9 @@
-Hi <%= @user.email %>
+Welcome <%= @user.category %>!
 
-Thank you for signing up to WYLD!
+Thanks for registering your interest in Wyld.live. You're just a catwalk away from completing the signup process. Click here to confirm your email address is active.
+
 Please confirm your email by clicking the link below.
+
+The Wyld Team
 
 <%= confirm_email_user_url(@user.confirm_token) %>

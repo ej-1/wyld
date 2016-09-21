@@ -259,14 +259,14 @@
                 </div>
             </div>
 
-
+ 
                 <div class="col-md-12">
                     <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="feature-item">
                                 <i class="icon-screen-smartphone text-primary"></i>
-                                <%= render 'signup_page' %>
+                                <%= render :partial => 'signup_page', :locals => {:category => 'sponsor', :checkbox_text => "I am a Sponsor and want to sign up to WYLD."}  %>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   before_create :confirmation_token
+  validates :email, presence: true
+  validates :checkbox_ticked, presence: true
+  validates :category, presence: true
 
 	private
 	def confirmation_token

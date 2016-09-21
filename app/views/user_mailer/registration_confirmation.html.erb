@@ -4,12 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome <%= @user.email %></h1>
+    <h1>Welcome <%= @user.category %>!</h1>
     <p>
-      Thank you for signing up to WYLD!
+      Thanks for registering your interest in Wyld.live. You're just a catwalk away from completing the signup process. Click here to confirm your email address is active.
     </p>
+
     <p>
       Please confirm your email by clicking the link below.
+    </p>
+
+    <p>
+      The Wyld Team
     </p>
     <%= confirm_email_user_url(@user.confirm_token) %>
   </body>

@@ -1,2 +1,27 @@
+<div class="signup-form">
 
-<%= render 'form', :@user => User.new  %>
+	<%= form_for @user, :html => { :class => "form-horizontal user" }, :remote => true do |f| %>
+
+            <p class="text-muted"><%= @checkbox_text %></p>
+		    <%= f.check_box :checkbox_ticked %> <br>
+
+	      <%= f.hidden_field :checkbox_text, :value => @checkbox_text %>
+	      <%= f.hidden_field :category, :value => @category %>
+
+	      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
+
+	      <%= f.submit 'Sign up', :class => 'btn btn-warning' %>
+
+
+	  <% if @user.errors.any? %>
+	      <div class="error-body">
+	        <ul>
+	        <% @user.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	  <% end %>
+
+	<% end %>
+</div>

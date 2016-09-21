@@ -105,8 +105,7 @@
                             <div class="feature-item">
                                 <i class="icon-screen-smartphone text-primary"></i>
                                 <h3>Email</h3>
-                                <p class="text-muted">None of the above. Then you must be a fashion lover. Enter your email and be first to know when we go live.</p>
-                                <%= render 'signup_page' %>
+                                <%= render :partial => 'signup_page', :locals => {:@category => 'fashionista', :@checkbox_text => "I am a Fashionista and want to sign up to WYLD."}  %>
                             </div>
                         </div>
                     </div>

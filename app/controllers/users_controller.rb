@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @user = User.new
   end
 
   # GET /users/1
@@ -19,6 +20,10 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+  end
+
+  def about
+    @user = User.new
   end
 
   def confirm_email
@@ -36,7 +41,11 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    @checkbox_text = user_params["checkbox_text"] # Used in signup_form if errors occur.
+    @category = user_params["category"] # @checkbox_text = user_params["checkbox_text"]
+    edited_user_params = user_params.except("checkbox_text")
+
+    @user = User.new(edited_user_params)
     respond_to do |format|
       if @user.save
         # Sends email to user when user is created.
@@ -45,7 +54,8 @@ class UsersController < ApplicationController
         format.html { redirect_to '/confirmation' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :new }
+        format.js
+        #format.html { render :layout => false, :notice => @users.errors }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -91,6 +101,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email)
+      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text)
     end
 end

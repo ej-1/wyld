@@ -16,6 +16,12 @@
  */
 
 
+
+ul {
+  list-style-type: none;
+  color: #fff;
+}
+
 .bullet-point-text {
     display: block;
     margin-top: -44px;
@@ -252,6 +258,21 @@ section.features .section-heading {
   display: inline-block;
   border-radius: 20px;
 }
+
+.field_with_errors {
+  display: inline-block; /* overwrites when errors appear to form; */
+  background-color: transparent; /* overwrites when errors appear to form; */
+  padding: 0px; /* overwrites when errors appear to form; */
+}
+
+.error-body {
+  margin-top: 10px;
+  display: none; /* fades in with create.js */
+  margin-left: -3em;
+  position: absolute; /* prevent pushing down section below error-body */
+  width: 100%; /* centering text after applying position: absolute; */
+}
+
 
 .bg-contact {
   background-color: #ff6c00;
