@@ -12,10 +12,10 @@
     <p>
       Please confirm your email by clicking the link below.
     </p>
-
+    <a href="<%= confirm_email_user_url(@user.confirm_token) %>">Confirm your email by clicking this link.</a>
     <p>
       The Wyld Team
     </p>
-    <%= confirm_email_user_url(@user.confirm_token) %>
+    
   </body>
 </html>
