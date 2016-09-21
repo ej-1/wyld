@@ -26,6 +26,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def sponsor_page
+    @user = User.new
+  end
+
+  def host_page
+    @user = User.new
+  end
+
+  def entrepreneur_page
+    @user = User.new
+  end
+
   def confirm_email
     user = User.find_by_confirm_token(params[:id])
     if user
