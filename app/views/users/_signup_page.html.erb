@@ -2,8 +2,11 @@
 
 	<%= form_for @user, :html => { :class => "form-horizontal user" }, :remote => true do |f| %>
 
-            <p class="text-muted"><%= @checkbox_text %></p>
-		    <%= f.check_box :checkbox_ticked %> <br>
+	        <ul class="horizontal-list">
+	          <li><%= f.check_box :checkbox_ticked %></li>
+	          <li><p class="text-muted"><%= @checkbox_text %></p></li>
+	        </ul>
+		   
 
 	      <%= f.hidden_field :checkbox_text, :value => @checkbox_text %>
 	      <%= f.hidden_field :category, :value => @category %>

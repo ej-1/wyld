@@ -22,6 +22,14 @@ ul {
   color: #fff;
 }
 
+.horizontal-list {
+  margin-left: -3em;
+}
+
+.horizontal-list li {
+  display: inline-block;
+}
+
 .bullet-point-text {
     display: block;
     margin-top: -44px;
@@ -266,11 +274,15 @@ section.features .section-heading {
 }
 
 .error-body {
-  margin-top: 10px;
+  margin-top: 15px;
   display: none; /* fades in with create.js */
   margin-left: -3em;
   position: absolute; /* prevent pushing down section below error-body */
   width: 100%; /* centering text after applying position: absolute; */
+}
+
+.error-body ul {
+  color: rgb(167, 3, 11);
 }
 
 
@@ -324,6 +336,11 @@ section.features .section-heading {
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
+  .error-body {
+    margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
+    position: relative !important; /* changed from absolute to relative in mobile format */
+  }
+
   .user-type-info-circle {
     margin-left: auto;
     margin-right: auto;
@@ -337,6 +354,11 @@ section.features .section-heading {
 
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
+
+  .error-body {
+    margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
+    position: relative !important; /* changed from absolute to relative in mobile format */
+  }
 
   .user-type-info-circle {
     margin-left: auto;
@@ -359,6 +381,11 @@ section.features .section-heading {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+
+  .error-body {
+    margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
+    position: relative !important; /* changed from absolute to relative in mobile format */
+  }
 
   .user-type-info-circle {
     margin-left: auto;
