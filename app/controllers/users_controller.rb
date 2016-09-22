@@ -65,7 +65,8 @@ class UsersController < ApplicationController
         format.html { redirect_to '/resent_email_confirmation' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { redirect_to root_url }
+        format.html { redirect_to '/resent_email_confirmation' }
+        #format.html { redirect_to root_url }
         #format.js
         #format.html { render :layout => false, :notice => @users.errors }
         #format.json { render json: @user.errors, status: :unprocessable_entity }
