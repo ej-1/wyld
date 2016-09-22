@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get 'confirmed_email' => 'users#confirmed_email_page'
   get 'imprint' => 'users#imprint'
   get 'change_category_page' => 'users#change_category_page'
+  get 'resend_confirmation_email' => 'users#resend_confirmation_email'
+  post 'resend' => 'users#resend'
+  get 'resent_email_confirmation' => 'users#resent_email_confirmation'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

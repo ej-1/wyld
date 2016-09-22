@@ -50,6 +50,33 @@ class UsersController < ApplicationController
     end
   end
 
+  def resend_confirmation_email
+    @user = User.new
+  end
+
+  def resend
+    @user = User.where(:email => user_params["email"]).first
+
+    respond_to do |format|
+      if @user
+        # Sends email to user when user is created.
+        UserMailer.registration_confirmation(@user).deliver
+
+        format.html { redirect_to '/resent_email_confirmation' }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { redirect_to root_url }
+        #format.js
+        #format.html { render :layout => false, :notice => @users.errors }
+        #format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def resent_email_confirmation
+
+  end
+
   def confirm_email
     user = User.find_by_confirm_token(params[:id])
     if user

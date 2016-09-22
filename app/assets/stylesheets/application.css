@@ -15,6 +15,22 @@
  *= require_self
  */
 
+
+ .form-horizontal-resend input { /* Mostly for the form on change_category_page */
+  border-radius: 20px;
+  width: 250px;
+  display: inline-block;
+}
+
+.form-horizontal-resend  { /* Mostly for the form on change_category_page */
+  margin: auto;
+  width: 450px;
+  padding: 10px;
+  margin-top: 5%;
+  height: 100%;
+}
+
+
 .form-horizontal-for-admin { /* Mostly for the form on change_category_page */
   margin: auto;
   width: 450px;
@@ -23,7 +39,7 @@
   height: 100%;
 }
 
-.form-horizontal { /* Mostly for the form on change_category_page */
+.form-horizontal-change-category { /* Mostly for the form on change_category_page */
   margin: auto;
   width: 150px;
   padding: 10px;
@@ -232,6 +248,12 @@ font-family: 'Monoton', cursive !important;
 
 a {
   text-decoration: none !important;
+  color: #ffbea4 !important;
+}
+
+a:hover {
+  background: transparent;
+  color: #fff !important;
 }
 
 .info-dropdown-box h4 {
