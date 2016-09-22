@@ -15,6 +15,13 @@
  *= require_self
  */
 
+.form-horizontal-for-admin { /* Mostly for the form on change_category_page */
+  margin: auto;
+  width: 450px;
+  padding: 10px;
+  margin-top: 5%;
+  height: 100%;
+}
 
 .form-horizontal { /* Mostly for the form on change_category_page */
   margin: auto;
