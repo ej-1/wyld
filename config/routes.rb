@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users do
       member do
         get :confirm_email
+        get :change_category_page
       end
     end
   root 'users#about'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get 'confirmation' => 'users#confirmation_page'
   get 'confirmed_email' => 'users#confirmed_email_page'
   get 'imprint' => 'users#imprint'
+  get 'change_category_page' => 'users#change_category_page'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -13,6 +13,13 @@
       Please confirm your email by clicking the link below.
     </p>
     <a href="<%= confirm_email_user_url(@user.confirm_token) %>">Confirm your email by clicking this link.</a>
+
+
+    <p>
+      Not a <%= @user.category %>? Follow the link below to change your status.
+    </p>
+    <a href="<%= change_category_page_user_url(@user.confirm_token) %>">Change status by following this link.</a>
+
     <p>
       The Wyld Team
     </p>

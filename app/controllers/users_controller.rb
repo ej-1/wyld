@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, only: [:index, :show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:index, :show, :edit, :destroy]
 
 
   # GET /users
@@ -38,6 +38,16 @@ class UsersController < ApplicationController
 
   def entrepreneur_page
     @user = User.new
+  end
+
+  def change_category_page
+    @user = User.find_by_confirm_token(params[:id])
+    if @user
+      flash[:success] = "You are granted access to change your category status."
+    else
+      flash[:error] = "Sorry. You do not have the access rights to change category status."
+      redirect_to root_url
+    end
   end
 
   def confirm_email
@@ -79,13 +89,18 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user = User.where(:confirm_token => user_params["confirm_token"]).first
+    edited_user_params = user_params.except("confirm_token") # Removes confim_token from params string to prevent confirm_token being changed.
+                                                             # User would still have needed to submit a confirm_token to be able to access change_category_page to begin with.
     respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+      if @user.update(edited_user_params) # also allow admin access!!!
+        format.html { redirect_to root_url }
+        #format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        #format.json { render :show, status: :ok, location: @user }
       else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        #format.html { render :edit }
+        #format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.html { redirect_to '/sponsor' }
       end
     end
   end
@@ -115,6 +130,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text)
+      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token)
     end
 end
