@@ -1,5 +1,9 @@
 <%= form_for @user, :html => { :class => "form-horizontal user" } do |f| %>
 
+    <div class="change_category_page_img">
+
+    </div>
+
   <% if @user.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
@@ -19,20 +23,18 @@
       <p>You are registered as a <%= f.label :user, @user.category %>.</p>
 
 	  <%= f.hidden_field :confirm_token, :value => @user.confirm_token %>
-	  <%= @user.confirm_token %>
-  <p>Fashionista</p>
- <%= radio_button("user", "category", "fashionista") %>
-  <p>Sponsor</p>
- <%= radio_button("user", "category", "sponsor") %>
-  <p>Host</p>
- <%= radio_button("user", "category", "host") %>
-  <p>Streamer</p>
- <%= radio_button("user", "category", "streamer") %>
 
+  <p><%= radio_button("user", "category", "fashionista") %> Fashionista</p>
 
-      <%= f.submit 'Save changes', :class => 'btn btn-warning' %>
+  <p><%= radio_button("user", "category", "sponsor") %> Sponsor</p>
+
+  <p><%= radio_button("user", "category", "host") %> Host</p>
+
+  <p><%= radio_button("user", "category", "streamer") %> Streamer</p>
+
   </div>
 
+      <%= f.submit 'Save changes', :class => 'btn btn-warning' %>
 
 
 

@@ -16,6 +16,13 @@
  */
 
 
+.form-horizontal { /* Mostly for the form on change_category_page */
+  margin: auto;
+  width: 150px;
+  padding: 10px;
+  margin-top: 20%;
+  height: 100%;
+}
 
 ul {
   list-style-type: none;
