@@ -14,9 +14,9 @@
 	      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
 
 	      <%= f.submit 'Sign up', :class => 'btn btn-warning' %>
-
+		<hr>
 		<br>
-	      <%= link_to 'Did not receive confirmation email?', '/resend_confirmation_email' %>
+	      <%= link_to 'Did not receive confirmation email?', '/resend_confirmation_email', :class => 'link_to_resend_confirmation_page' %>
 
 	  <% if @user.errors.any? %>
 	      <div class="error-body">
