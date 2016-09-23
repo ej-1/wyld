@@ -88,11 +88,11 @@ class UsersController < ApplicationController
       if @user.category == "sponsor"
               puts @user.email
 
-        redirect_to confirmed_email_sponsor_path(:user => @user)
+        redirect_to confirmed_email_sponsor_path(:user => @user, :confirm_token => @user.confirm_token)
       elsif @user.category == "host"
-        redirect_to confirmed_email_host_path(:user => @user)
+        redirect_to confirmed_email_host_path(:user => @user, :confirm_token => @user.confirm_token)
       elsif @user.category == "streamer"
-        redirect_to confirmed_email_streamer_path(:user => @user)
+        redirect_to confirmed_email_streamer_path(:user => @user, :confirm_token => @user.confirm_token)
       elsif @user.category == "fashionista"
         redirect_to '/confirmed_email_fashionista'
       end
@@ -104,15 +104,30 @@ class UsersController < ApplicationController
 
 
 def confirmed_email_page_sponsor
-  @user = User.find(params[:user])
+  @user = User.find_by_confirm_token(params[:confirm_token])
+  if @user
+
+  else
+    redirect_to root_url
+  end
 end
 
 def confirmed_email_page_host
-  @user = User.find(params[:user])
+  @user = User.find_by_confirm_token(params[:confirm_token])
+  if @user
+
+  else
+    redirect_to root_url
+  end
 end
 
 def confirmed_email_page_streamer
-  @user = User.find(params[:user])
+  @user = User.find_by_confirm_token(params[:confirm_token])
+  if @user
+
+  else
+    redirect_to root_url
+  end
 end
 
 
