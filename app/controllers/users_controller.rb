@@ -79,14 +79,57 @@ class UsersController < ApplicationController
   end
 
   def confirm_email
-    user = User.find_by_confirm_token(params[:id])
-    if user
-      email_activate(user)
+    @user = User.find_by_confirm_token(params[:id])
+    if @user
+      puts "look here"
+      puts @user.category
+      email_activate(@user)
       flash[:success] = "Your email has been confirmed."
-      redirect_to '/confirmed_email'
+      if @user.category == "sponsor"
+              puts @user.email
+
+        redirect_to confirmed_email_sponsor_path(:user => @user)
+      elsif @user.category == "host"
+        redirect_to confirmed_email_host_path(:user => @user)
+      elsif @user.category == "streamer"
+        redirect_to confirmed_email_streamer_path(:user => @user)
+      elsif @user.category == "fashionista"
+        redirect_to '/confirmed_email_fashionista'
+      end
     else
       flash[:error] = "Sorry. Email does not exist"
       redirect_to '/confirmed_email'
+    end
+  end
+
+
+def confirmed_email_page_sponsor
+  @user = User.find(params[:user])
+end
+
+def confirmed_email_page_host
+  @user = User.find(params[:user])
+end
+
+def confirmed_email_page_streamer
+  @user = User.find(params[:user])
+end
+
+
+  def submit_questionnaire
+    @user = User.where(:confirm_token => user_params["confirm_token"]).first
+    edited_user_params = user_params.except("confirm_token") # Removes confim_token from params string to prevent confirm_token being changed.
+                                                             # User would still have needed to submit a confirm_token to be able to access change_category_page to begin with.
+    respond_to do |format|
+      if @user.update(edited_user_params) # also allow admin access!!!
+        format.html { redirect_to '/thank_you_for_answers' }
+        #format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        #format.json { render :show, status: :ok, location: @user }
+      else
+        #format.html { render :edit }
+        #format.json { render json: @user.errors, status: :unprocessable_entity }
+        #format.html { redirect_to '/sponsor' }
+      end
     end
   end
 
@@ -122,7 +165,7 @@ class UsersController < ApplicationController
                                                              # User would still have needed to submit a confirm_token to be able to access change_category_page to begin with.
     respond_to do |format|
       if @user.update(edited_user_params) # also allow admin access!!!
-        format.html { redirect_to root_url }
+        format.html { redirect_to '/change_category_confirmation' }
         #format.html { redirect_to @user, notice: 'User was successfully updated.' }
         #format.json { render :show, status: :ok, location: @user }
       else
@@ -158,6 +201,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token)
+      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token, :company_name, :company_url, :product_or_service_industry, :name, :customer_description)
     end
 end

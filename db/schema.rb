@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921143101) do
+ActiveRecord::Schema.define(version: 20160922234919) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -30,12 +30,28 @@ ActiveRecord::Schema.define(version: 20160921143101) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.boolean  "email_confirmed", default: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.boolean  "email_confirmed",             default: false
     t.string   "confirm_token"
     t.string   "category"
     t.boolean  "checkbox_ticked"
+    t.string   "company_name"
+    t.string   "name"
+    t.integer  "facebook_followers"
+    t.integer  "youtube_followers"
+    t.integer  "pinterest_followers"
+    t.integer  "instagram_followers"
+    t.integer  "other_media_followers"
+    t.string   "country"
+    t.string   "style"
+    t.string   "gender_focus"
+    t.integer  "design_experience"
+    t.string   "viewer_base_description"
+    t.string   "channel_adress"
+    t.string   "company_url"
+    t.string   "product_or_service_industry"
+    t.text     "customer_description"
   end
 
 end

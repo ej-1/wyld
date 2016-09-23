@@ -15,6 +15,9 @@
 
 	      <%= f.submit 'Sign up', :class => 'btn btn-warning' %>
 
+		<br>
+	      <%= link_to 'Did not receive confirmation email?', '/resend_confirmation_email' %>
+
 	  <% if @user.errors.any? %>
 	      <div class="error-body">
 	        <ul>
@@ -26,6 +29,4 @@
 	  <% end %>
 	<% end %>
 
-		<br>
-	      <%= link_to 'Did not receive confirmation email?', '/resend_confirmation_email' %>
 </div>

@@ -1,0 +1,47 @@
+
+    <header class="confirmed_email_header">
+        <div class="fullscreen-bg-sponsor">
+            <img src="dark_colors.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner confirmation-questionaire-header">
+                        	  <h1><% flash.each do |name, msg| %>
+    							<%= content_tag :div, msg, class: "" %>
+  								<% end %></h1>
+
+                              <h2>Thank you for confirming your email address.</h2>
+
+                              <h4>In the very near future, we'll be contacting selected designers and collectives about collections and shows planned for 2017. The email will include a few questions related to the demographic for which selected designers are creating their wares. This info will help us find the best matching sponsor and livestreaming host. You can put yourself ahead of the cue by filling out the form below now:</h4>
+
+                              <h4>Note that follower count will not influence who we contact - we are equally interested in designers just starting out as well as those who have been in business for a while. Any questions? Get in touch with us. designers@wild.live</h4>
+
+                              <h4>The Wyld Team</h4>
+
+                                <%= render :partial => 'questionnaire_host.html.erb', :locals => {}  %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+

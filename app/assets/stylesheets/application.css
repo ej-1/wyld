@@ -15,12 +15,36 @@
  *= require_self
  */
 
+  .confirmed_email_header_fashionista { /* Mostly for the form on change_category_page */
+    background: #000;
+  }
+
+ .confirmation-fashionista { /* Mostly for the form on change_category_page */
+    top: -100px !important;
+  }
+
+  .confirmed_email_header { /* Mostly for the form on change_category_page */
+    background: #000;
+    height: 2200px;
+  }
+
+ .confirmation-questionaire-header { /* Mostly for the form on change_category_page */
+    top: 50% !important;
+  }
+
+ .form-followers { /* Mostly for the form on change_category_page */
+    width: 280px;
+  }
+
+ .questionnaire-form input { /* Mostly for the form on change_category_page */
+   margin-top: 20px !important;
+  }
 
  .form-horizontal-resend input { /* Mostly for the form on change_category_page */
   border-radius: 20px;
   width: 250px;
   display: inline-block;
-}
+  }
 
 .form-horizontal-resend  { /* Mostly for the form on change_category_page */
   margin: auto;

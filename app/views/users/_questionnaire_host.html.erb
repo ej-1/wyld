@@ -1,0 +1,49 @@
+
+<div class="questionnaire-form">
+
+	<%= form_for @user, :url => {:action => "submit_questionnaire"}, :html => { :class => "form-horizontal user" }, :remote => true do |f| %>
+
+      <%= f.hidden_field :confirm_token, :value => @user.confirm_token %>
+
+	<h2>Information for us to help your fashion</h2>
+
+	<%= f.text_field :company_name, :class => 'form-control', :placeholder => 'Company name' %>
+
+	<%= f.text_field :name, :class => 'form-control', :placeholder => 'Name' %>
+
+	<h2>Number of followers</h2>
+
+	<%= f.text_field :facebook_followers, :class => 'form-control form-followers', :placeholder => 'Facebook' %>
+
+	<%= f.text_field :youtube_followers, :class => 'form-control form-followers', :placeholder => 'Youtube' %>
+
+	<%= f.text_field :pinterest_followers, :class => 'form-control form-followers', :placeholder => 'Pinterest' %>
+
+	<%= f.text_field :instagram_followers, :class => 'form-control form-followers', :placeholder => 'Instagram' %>
+
+	<%= f.text_field :other_media_followers, :class => 'form-control form-followers', :placeholder => 'On other social media' %>
+
+	<h2>Additional info</h2>
+
+	<%= f.text_field :country, :class => 'form-control', :placeholder => 'Country' %>
+
+	<%= f.text_field :style, :class => 'form-control', :placeholder => 'Fashion style (e.g. Western)' %>
+
+	<%= f.text_field :gender_focus, :class => 'form-control', :placeholder => 'Gender focus (if any)*' %>
+
+	<%= f.text_field :design_experience, :class => 'form-control', :placeholder => 'Years of design experience' %>
+
+	<%= f.submit 'Submit answers', :class => 'btn btn-warning' %>
+
+	  <% if @user.errors.any? %>
+	      <div class="error-body">
+	        <ul>
+	        <% @user.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	  <% end %>
+	<% end %>
+
+</div>

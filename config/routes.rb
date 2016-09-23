@@ -12,9 +12,20 @@ Rails.application.routes.draw do
   get 'host' => 'users#host_page'
   get 'entrepreneur' => 'users#entrepreneur_page'
   get 'confirmation' => 'users#confirmation_page'
-  get 'confirmed_email' => 'users#confirmed_email_page'
+
+  get 'confirmed_email_fashionista' => 'users#confirmed_email_page_fashionista'
+  get 'confirmed_email_sponsor' => 'users#confirmed_email_page_sponsor'
+  get 'confirmed_email_host' => 'users#confirmed_email_page_host'
+  get 'confirmed_email_streamer' => 'users#confirmed_email_page_streamer'
+
+  patch 'submit_questionnaire' => 'users#submit_questionnaire'
+  get 'thank_you_for_answers' => 'users#thank_you_for_answers'
+
   get 'imprint' => 'users#imprint'
   get 'change_category_page' => 'users#change_category_page'
+  get 'change_category_confirmation' => 'users#change_category_confirmation'
+
+  
   get 'resend_confirmation_email' => 'users#resend_confirmation_email'
   post 'resend' => 'users#resend'
   get 'resent_email_confirmation' => 'users#resent_email_confirmation'
