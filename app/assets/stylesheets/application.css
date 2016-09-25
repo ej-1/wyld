@@ -356,7 +356,6 @@ section.features .section-heading {
 }
 
 .user-type-heading {
-  white-space: nowrap;
   margin-bottom: 70px
 }
 
@@ -397,6 +396,10 @@ section.features .section-heading {
 
 @media screen and (max-width: 991px) and (max-width: 769px) {
 
+  section.features .section-heading {
+    white-space: nowrap;
+  }
+
   .fullscreen-bg-info img {
     width: 100%;
     filter: brightness(45%);
@@ -412,8 +415,6 @@ section.features .section-heading {
   .fullscreen-bg {
    overflow: hidden;
   }
-
-
 
   .logo-box {
     margin-top: -70%;
@@ -434,6 +435,15 @@ section.features .section-heading {
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
+
+  .user-type-heading {
+    white-space: nowrap;
+    margin-bottom: 70px
+  }
+
+  section.features .section-heading {
+    white-space: nowrap;
+  }
 
   .error-body {
     margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
