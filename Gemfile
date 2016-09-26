@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jquery-turbolinks'
+gem 'turbolinks-redirect' # Added to solve issue following issue: after adding jquery-turbolinks, redirect_to method in controller would not work with "remote => true" in form.
+gem 'jquery-turbolinks' # Added to solve issue with application.js not loading after user clicks "back" button in web browser.
 gem 'validates_email_format_of' # Validates format of submitted user emails.
 # http://stackoverflow.com/questions/13784845/how-would-one-validate-the-format-of-an-email-field-in-activerecord
 gem "devise"
