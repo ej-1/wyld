@@ -265,6 +265,10 @@ h3 {
   font-weight: 100;
 }
 
+h4 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .wyld-word {
   font-family: 'Monoton', cursive;
   font-weight: normal;
