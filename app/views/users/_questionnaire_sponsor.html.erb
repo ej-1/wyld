@@ -11,16 +11,20 @@
 
 	<%= f.text_field :company_url, :class => 'form-control', :placeholder => 'Company URL' %>
 
-	<%= f.text_field :product_or_service_industry, :class => 'form-control', :placeholder => 'Do you offer products or services?' %>
+	<%= f.text_field :product_or_service_industry, :class => 'form-control', :placeholder => 'What products or services do you offer?' %>
 
 	<%= f.text_field :name, :class => 'form-control', :placeholder => 'Name' %>
 
 	<h2>Additional info</h2>
 
-<h4>How would you describe the customers who buy your product. Put another way, who you would like to reach by sponsoring a fashion show livestreaing? Please be specific regarding age, size, style preferences (chic, hippy, sophisticated, urban etc), </h4>
+	<h4>How would you describe the customers who buy your product? Put another way, who you would like to reach by sponsoring a fashion show livestreaming? Please be specific regarding age range, gender, style preferences (chic, hippy, sophisticated, urban etc),</h4>
 
-	<%= f.text_field :customer_description, :class => 'form-control', :placeholder => 'Customer description' %>
+	<%= f.text_area :customer_description, :class => 'form-control', :placeholder => 'Customer description' %>
+	
+	<h4>Non-binding amount you would expect to spend to reach a mix audience of designers, fashionistas, clothing chains, fashion students, distributors and suppliers?</h4>
 
+  <%= f.select(:total_offline_and_online_audience_marketing_cost, options_for_select([['Select amount',''],['Less than 1000 €','Less than 1000 €'],['Less than 5000 €','Less than 5000 €'],['Less than 10 000 €','Less than 10 000 €'],['Above 10 000 €','Above 10 000 €']], :selected => @user.total_offline_and_online_audience_marketing_cost), {}, {class: "form-control"}) %>
+	<br>
 	<%= f.submit 'Submit answers', :class => 'btn btn-warning' %>
 
 	  <% if @user.errors.any? %>

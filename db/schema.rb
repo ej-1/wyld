@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 20160922234919) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.boolean  "email_confirmed",             default: false
+    t.datetime "created_at",                                                       null: false
+    t.datetime "updated_at",                                                       null: false
+    t.boolean  "email_confirmed",                                  default: false
     t.string   "confirm_token"
     t.string   "category"
     t.boolean  "checkbox_ticked"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160922234919) do
     t.string   "style"
     t.string   "gender_focus"
     t.integer  "design_experience"
+    t.string   "total_offline_and_online_audience_marketing_cost"
     t.string   "viewer_base_description"
     t.string   "channel_adress"
     t.string   "company_url"

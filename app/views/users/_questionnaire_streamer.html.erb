@@ -5,7 +5,7 @@
 
       <%= f.hidden_field :confirm_token, :value => @user.confirm_token %>
 
-	<h2>Information for us to help your channel or blog</h2>
+	<h2>Information to help us ensure your channel or blog is paired with the right sponsor and fashion show</h2>
 
 	<%= f.text_field :channel_adress, :class => 'form-control', :placeholder => 'Channel address' %>
 
@@ -25,12 +25,12 @@
 
 	<h2>Additional info</h2>
 
-	<%= f.text_field :country, :class => 'form-control', :placeholder => 'Country of residence' %>
+	<%= f.text_field :country, :class => 'form-control', :placeholder => 'City of residence' %>
 
 	<%= f.text_field :style, :class => 'form-control', :placeholder => 'Fashion style (e.g. Western)' %>
 <h5>(i.e. do you have a style preference for the fashion you feature on your show)</h5>
 	<%= f.text_field :gender_focus, :class => 'form-control', :placeholder => 'Gender focus (if any)*' %>
-<h4>How would you describe the kind of viewers who regularly watch your show</h4>
+<h4>How would you describe the kind of viewers who regularly watch your show? Please be detailed and use the keywords you use in video descriptions.</h4>
 	<%= f.text_area :viewer_base_description, :class => 'form-control', :placeholder => 'Viewer base description' %>
 
 	<%= f.submit 'Submit answers', :class => 'btn btn-warning' %>

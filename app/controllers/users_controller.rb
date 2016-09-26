@@ -154,7 +154,7 @@ end
     @checkbox_text = user_params["checkbox_text"] # Used in signup_form if errors occur.
     @category = user_params["category"] # @checkbox_text = user_params["checkbox_text"]
     edited_user_params = user_params.except("checkbox_text")
-
+    puts user_params["total_offline_and_online_audience_marketing_cost"]
     @user = User.new(edited_user_params)
     respond_to do |format|
       if @user.save
@@ -178,6 +178,10 @@ end
     @user = User.where(:confirm_token => user_params["confirm_token"]).first
     edited_user_params = user_params.except("confirm_token") # Removes confim_token from params string to prevent confirm_token being changed.
                                                              # User would still have needed to submit a confirm_token to be able to access change_category_page to begin with.
+
+   puts "LOOK HERE"
+    puts user_params["total_offline_and_online_audience_marketing_cost"]
+    puts "--------"
     respond_to do |format|
       if @user.update(edited_user_params) # also allow admin access!!!
         format.html { redirect_to '/change_category_confirmation' }
@@ -216,6 +220,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token, :company_name, :company_url, :product_or_service_industry, :name, :customer_description, :channel_adress, :facebook_followers, :youtube_followers, :pinterest_followers, :instagram_followers, :other_media_followers, :country, :style, :gender_focus, :viewer_base_description, :design_experience)
+      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token, :company_name, :company_url, :product_or_service_industry, :name, :customer_description, :channel_adress, :facebook_followers, :youtube_followers, :pinterest_followers, :instagram_followers, :other_media_followers, :country, :style, :gender_focus, :viewer_base_description, :design_experience, :total_offline_and_online_audience_marketing_cost)
     end
 end

@@ -11,5 +11,6 @@ class AddQuestionsToUser < ActiveRecord::Migration
     add_column :users, :style, :string
     add_column :users, :gender_focus, :string
     add_column :users, :design_experience, :integer
+    add_column :users, :total_offline_and_online_audience_marketing_cost, :string
   end
 end
