@@ -175,6 +175,7 @@ ul {
 }
 
 .fullscreen-bg-sponsor {
+  height: auto;
   background: black;
   overflow: hidden;
 }
@@ -446,6 +447,15 @@ section.features .section-heading {
 }
 
 
+@media screen and (min-width: 991px) and (max-width: 1199px){
+
+  .circles-area   {
+    margin-left: 29%;
+  }
+
+}
+
+
 @media screen and (min-width: 991px) {
 
   .btn-warning {
@@ -456,6 +466,10 @@ section.features .section-heading {
     margin-top: 10% !important;
   }
 
+
+  .confirmation-thank-you-for-answers   {
+    margin-top: -40% !important;
+  }
 
   .confirmation-thank-you-for-answers   {
     margin-top: -40% !important;
