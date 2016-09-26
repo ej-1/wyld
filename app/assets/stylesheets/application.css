@@ -16,8 +16,12 @@
  */
 
   .photo-credits { /* Mostly for the form on change_category_page */
-    opacity: 0.7;
+    opacity: 0.3;
     text-align: right;
+    right: 10px;
+    position: absolute;
+    bottom: 0px;
+    font-size: 10px;
   }
 
   a { /* Mostly for the form on change_category_page */
