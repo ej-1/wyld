@@ -37,7 +37,7 @@ Rails.application.configure do
     user_name:            'erikwjonsson@gmail.com',
     password:             'martius2',
     authentication:       'plain',
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
     :openssl_verify_mode  => 'none'
   }
   #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
