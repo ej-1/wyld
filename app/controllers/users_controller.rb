@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, only: [:index, :show, :edit, :destroy]
+  before_action :get_url
 
 
   # GET /users
@@ -206,6 +207,12 @@ end
   end
 
   private
+
+    def get_url
+      @url = request.path_info
+      puts "CHECK THE URL HERE------------------"
+      puts @url
+    end
 
     def email_activate(user)
       user.email_confirmed = true
