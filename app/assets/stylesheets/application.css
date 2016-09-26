@@ -100,9 +100,9 @@ ul {
 
 .bullet-point-text {
     display: block;
-    margin-top: -44px;
+    margin-top: -28px;
     margin-left: 63px;
-    margin-bottom: 4px;
+    margin-bottom: -6px;
     line-height: 40px;
 }
 
@@ -316,6 +316,10 @@ a:hover {
 
 .text-section-break {
   margin-top: 50px;
+}
+
+.text-section-break-small {
+  margin-top: 20px;
 }
 
 .aboutus-text {
