@@ -551,6 +551,10 @@ section.features .section-heading {
 
 @media screen and (max-width: 767px) and (min-width: 480px) {
 
+  .fullscreen-bg-info img {
+    width: 100%;
+  }
+
   .error-body {
     margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
     position: relative !important; /* changed from absolute to relative in mobile format */
@@ -577,6 +581,10 @@ section.features .section-heading {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+
+  .fullscreen-bg-info img {
+    width: 100%;
+  }
 
   .error-body {
     margin-left: -2em !important; /* changed from 3 to 2 in mobile format */
