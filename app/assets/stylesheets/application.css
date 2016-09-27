@@ -445,7 +445,7 @@ section.features .section-heading {
   }
 }
 
-@media screen and (max-width: 991px) and (min-width: 769px) {
+@media screen and (max-width: 991px) and (min-width: 768px) {
 
   section.features .section-heading {
     white-space: nowrap;
