@@ -478,7 +478,24 @@ section.features .section-heading {
 }
 
 
+@media screen and (min-width: 1200px){
+
+  .video_replacement {
+    display: none;
+  }
+
+}
+
+
 @media screen and (min-width: 991px) and (max-width: 1199px){
+
+  .video_replacement {
+    width: 100%;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
 
   .circles-area   {
     margin-left: 29%;
@@ -488,10 +505,6 @@ section.features .section-heading {
 
 
 @media screen and (min-width: 991px) {
-
-  .video_replacement {
-    display: none;
-  }
 
   .btn-warning {
       margin-top: -5px !important;
