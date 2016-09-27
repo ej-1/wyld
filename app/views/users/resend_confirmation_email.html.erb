@@ -1,52 +1,33 @@
-        <div class="fullscreen-bg">
-            <video loop muted autoplay class="fullscreen-bg__video">
-                <source src="12626384.mp4" type="video/mp4">
-                <source src="12626384.webm" type="video/webm">
-                <source src="12626384.ogv" type="video/ogg">
-            </video>
 
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 logo-box">
-                        <h2>Resend confirmation email</h2>
-                        <%= render :partial => 'form_resend_confirmation_email', :locals => {:@user => User.new}  %>
-                    </div>
-                </div>
-            </div>
+    <header class="confirmed_email_header_fashionista">
+        <div class="fullscreen-bg-sponsor">
+            <img src="dark_runway_faded.jpg" class="img-responsive" alt="">
+            <a href="/imprint" class="photo-credits">Photo: Liton Ali</a>
         </div>
-
-
-
-
-
-    <section id="features" class="features">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-heading">
-
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner confirmation-thank-you-for-answers">
+                        <h2>Resend confirmation email</h2>
+                        <%= render :partial => 'form_resend_confirmation_email', :locals => {:@user => User.new}  %>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-                <div class="col-md-12">
-                    <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="feature-item">
-                                <i class="icon-screen-smartphone text-primary"></i>
-
+                <div class="col-sm-5">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
 
-
-
-
-
-    </section>
 
