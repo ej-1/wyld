@@ -514,6 +514,10 @@ section.features .section-heading {
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
+  .video_replacement {
+    width: 100%;
+  }
+
   .fullscreen-bg__video {
     display: none;
   }
@@ -566,6 +570,7 @@ section.features .section-heading {
 
   .fullscreen-bg-info img {
     width: 100%;
+    overflow: hidden;
   }
 
   .error-body {
