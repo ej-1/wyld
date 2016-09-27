@@ -514,7 +514,7 @@ section.features .section-heading {
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
-  .video_replacement {
+  .fullscreen-bg__video {
     display: none;
   }
 
