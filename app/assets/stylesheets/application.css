@@ -459,6 +459,14 @@ section.features .section-heading {
 
 @media screen and (max-width: 767px) {
 
+  .page-scroll-wyld:hover {
+    color: gold !important;
+  }
+
+  .page-scroll:hover {
+    color: #fdcc52 !important;
+  }
+
   .video_replacement {
     width: 200%;
   }
