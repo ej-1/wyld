@@ -24,20 +24,19 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
-  config.action_mailer.default_url_options = { :host => 'https://protected-springs-63043.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'protected-springs-63043.herokuapp.com' }
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'gmail.com',
+    authentication:       'plain',
+    domain:               'wyld.live',
     user_name:            'erikwjonsson@gmail.com',
     password:             'martius2',
-    authentication:       'plain',
-    enable_starttls_auto: true,
     :openssl_verify_mode  => 'none'
   }
   #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
