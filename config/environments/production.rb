@@ -24,10 +24,16 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: 'key-525501d33bae9d9dd5b1611533c20b4c',
+    domain: 'sandbox075b55a8761d42ba83c6f22dabd8c9b6.mailgun.org'
+  }
+
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   config.action_mailer.default_url_options = { :host => 'protected-springs-63043.herokuapp.com' }
   config.action_mailer.smtp_settings = {
