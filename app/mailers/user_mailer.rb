@@ -1,7 +1,25 @@
 class UserMailer < ActionMailer::Base
   default :from => "erikwjonsson@gmail.com"
   
-  def registration_confirmation(user)
+  def registration_confirmation_fashionista(user)
+    @user = user
+    #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
+    mail(:to => @user.email, :subject => "Wyld | Confirm your email address ")
+  end
+
+  def registration_confirmation_sponsor(user)
+    @user = user
+    #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
+    mail(:to => @user.email, :subject => "Wyld | Confirm your email address ")
+  end
+
+  def registration_confirmation_host(user)
+    @user = user
+    #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
+    mail(:to => @user.email, :subject => "Wyld | Confirm your email address ")
+  end
+
+  def registration_confirmation_streamer(user)
     @user = user
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
     mail(:to => @user.email, :subject => "Wyld | Confirm your email address ")

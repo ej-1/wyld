@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for registering a Channel Owner account with WYLD.</h1>
+    <p>
+      As soon as we have some important updates regarding upcoming shows scheduled for 2017, we will be in touch. 
+      <br>If you have any questions in the meantime, please contact jerome@wyld.live.
+    </p>
+
+    <p>
+      Please confirm your email by clicking the link below.
+    </p>
+    <a href="<%= confirm_email_user_url(@user.confirm_token) %>">Confirm your email by clicking this link.</a>
+
+    <p>
+      The team at WYLD.live
+    </p>
+
+    <p>
+      Not a Channel Owner?
+    </p>
+    <a href="<%= change_category_page_user_url(@user.confirm_token) %>">Change your status by clicking this link.</a>
+    
+  </body>
+</html>

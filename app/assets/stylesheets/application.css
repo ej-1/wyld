@@ -60,7 +60,8 @@
   }
 
   .link_to_resend_confirmation_page { /* Mostly for the form on change_category_page */
-    color: #ffbea4 !important;
+    /* color: #ffbea4 !important; */
+    color: rgba(255, 255, 255, 0.73) !important;
     margin-bottom: -100px;
   }
 

@@ -61,7 +61,15 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user
         # Sends email to user when user is created.
-        UserMailer.registration_confirmation(@user).deliver
+        if @user.category == "fashionista"
+          UserMailer.registration_confirmation_fashionista(@user).deliver
+        elsif @user.category == "sponsor"
+          UserMailer.registration_confirmation_sponsor(@user).deliver
+        elsif @user.category == "host"
+          UserMailer.registration_confirmation_host(@user).deliver
+        elsif @user.category == "streamer"
+          UserMailer.registration_confirmation_streamer(@user).deliver
+        end
 
         format.html { redirect_to '/resent_email_confirmation' }
         format.json { render :show, status: :created, location: @user }
@@ -160,8 +168,16 @@ end
     respond_to do |format|
       if @user.save
         # Sends email to user when user is created.
-        UserMailer.registration_confirmation(@user).deliver
-
+        if @user.category == "fashionista"
+          UserMailer.registration_confirmation_fashionista(@user).deliver
+        elsif @user.category == "sponsor"
+          UserMailer.registration_confirmation_sponsor(@user).deliver
+        elsif @user.category == "host"
+          UserMailer.registration_confirmation_host(@user).deliver
+        elsif @user.category == "streamer"
+          UserMailer.registration_confirmation_streamer(@user).deliver
+        end
+        
         format.html { redirect_to '/confirmation' }
         format.json { render :show, status: :created, location: @user }
       else

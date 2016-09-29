@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for registering your interest in WYLD</h1>
+    <p>
+      Please confirm your email by clicking on the link below and you'll be one more step down the catwalk of livestreamed fashion.
+    </p>
+
+    <a href="<%= confirm_email_user_url(@user.confirm_token) %>">Confirm your email by clicking this link.</a>
+
+    <p>
+      The WYLD Team
+    </p>
+
+    <hr>
+    <p>
+      Are you a Sponsor, Fashion show planner or Channel owner?
+    </p>
+    <a href="<%= change_category_page_user_url(@user.confirm_token) %>">Change your status by clicking this link.</a>
+
+  </body>
+</html>
