@@ -532,9 +532,17 @@ section.features .section-heading {
     margin-top: -40% !important;
   }
 
+  .user-type-heading {
+    white-space: nowrap;
+  }
+
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
+
+  #user_checkbox_ticked {
+    margin-bottom: 5px;
+  }
 
   .video_replacement {
     width: 100%;
@@ -585,6 +593,9 @@ section.features .section-heading {
 
 @media screen and (max-width: 767px) and (min-width: 480px) {
 
+  #user_checkbox_ticked {
+    margin-bottom: 5px;
+  }
 
   .fullscreen-bg__video {
     display: none;
@@ -621,6 +632,10 @@ section.features .section-heading {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+
+  #user_checkbox_ticked {
+    margin-bottom: 5px;
+  }
 
   .fullscreen-bg__video {
     display: none;
