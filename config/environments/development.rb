@@ -21,7 +21,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
           api_key: 'key-525501d33bae9d9dd5b1611533c20b4c',
-          domain: 'sandbox075b55a8761d42ba83c6f22dabd8c9b6.mailgun.org'
+          domain: 'wyld.live'
   }
 
   #config.action_mailer.delivery_method = :smtp
