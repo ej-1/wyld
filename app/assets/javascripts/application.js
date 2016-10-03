@@ -68,7 +68,7 @@ $(".user-type-info-circle").click(function() {
         if (current_url === "http://wyld.live") {
                 $('html, body').animate({scrollTop : 0},800);
         } else {
-                window.location.replace("https://protected-springs-63043.herokuapp.com/");
+                window.location.replace("http://wyld.live");
         }
     });
 
