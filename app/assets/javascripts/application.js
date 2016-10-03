@@ -41,6 +41,7 @@ $(document).on('turbolinks:load', function() {
 	});
 
 
+$(".user-type-info-circle").css("background-color", "#fff");
 
 $(".user-type-info-circle").hover(function(){
     $(this).css("background-color", "#f2dede").children();
