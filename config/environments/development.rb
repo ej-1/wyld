@@ -20,7 +20,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
-          api_key: 'key-525501d33bae9d9dd5b1611533c20b4c',
+          api_key: ENV['MAILGUN_KEY'],
           domain: 'wyld.live'
   }
 
@@ -31,8 +31,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'wyld.live',
-    user_name:            'erikwjonsson@gmail.com',
-    password:             'martius2',
+    user_name:            ENV['EMAIL'],
+    password:             ENV['PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true
   }
