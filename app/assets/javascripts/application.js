@@ -65,7 +65,7 @@ $(".user-type-info-circle").click(function() {
 
     $('.page-scroll-wyld').click(function(){ // Clicking WYLD logo at top left - scroll to top or back to main page.
         var current_url = window.location.href
-        if (current_url === "https://protected-springs-63043.herokuapp.com/") {
+        if (current_url === "http://wyld.live") {
                 $('html, body').animate({scrollTop : 0},800);
         } else {
                 window.location.replace("https://protected-springs-63043.herokuapp.com/");
