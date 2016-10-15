@@ -21,7 +21,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
           api_key: ENV['MAILGUN_KEY'],
-          domain: 'wyld.live'
+          domain: 'wyld.events'
   }
 
   #config.action_mailer.delivery_method = :smtp
@@ -30,7 +30,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'wyld.live',
+    domain:               'wyld.events',
     user_name:            ENV['EMAIL'],
     password:             ENV['PASSWORD'],
     authentication:       'plain',
