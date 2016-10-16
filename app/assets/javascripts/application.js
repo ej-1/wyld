@@ -66,10 +66,10 @@ $(".user-type-info-circle").click(function() {
 
     $('.page-scroll-wyld').click(function(){ // Clicking WYLD logo at top left - scroll to top or back to main page.
         var current_url = window.location.href
-        if (current_url === "http://wyld.live") {
+        if (current_url === "http://wyld.events") {
                 $('html, body').animate({scrollTop : 0},800);
         } else {
-                window.location.replace("http://wyld.live");
+                window.location.replace("http://wyld.events");
         }
     });
 
