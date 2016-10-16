@@ -441,6 +441,10 @@ section.features .section-heading {
 
 @media screen and (min-width: 1400px) {
 
+  #download {
+    min-height: 110%;
+  }
+
   .header-content {
     margin-top: -100%;
   }
