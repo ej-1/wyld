@@ -6,14 +6,18 @@
 	          <li><%= f.check_box :checkbox_ticked %></li>
 	          <li><p class="text-muted"><%= @checkbox_text %></p></li>
 	        </ul>
-		   
-
+		  
 	      <%= f.hidden_field :checkbox_text, :value => @checkbox_text %>
 	      <%= f.hidden_field :category, :value => @category %>
 
 	      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
-
+		<br>
+			<%= f.label :humanizer_answer, @user.humanizer_question, :class => 'captcha-question-text' %>
+			<%= f.text_field :humanizer_answer, :class => 'form-control captcha-field', :placeholder => "Answer"  %>
+			<%= f.hidden_field :humanizer_question_id %>
+		<br>
 	      <%= f.submit 'Sign up', :class => 'btn btn-warning' %>
+
 		<hr>
 		<br>
 	      <%= link_to 'Did not receive confirmation email?', '/resend_confirmation_email', :class => 'link_to_resend_confirmation_page' %>

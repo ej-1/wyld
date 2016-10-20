@@ -15,6 +15,20 @@
  *= require_self
  */
 
+  .captcha-question-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .captcha-field {
+    width: 250px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
   .photo-credits-resendconfirmation {
     opacity: 0.3;
     text-align: right;
@@ -277,6 +291,9 @@ ul {
 
 #user_email {
   width: 250px;
+  margin-top: -23px !important;
+  position: absolute;
+  margin-left: -9em;
 }
 
 

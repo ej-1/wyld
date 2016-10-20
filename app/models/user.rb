@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   before_create :confirmation_token
- 
+  include Humanizer # For captcha
+  require_human_on :create # For captcha
+
   validate :check_email
 	#validates :email, uniqueness: true, uniqueness: { message: "has already been registered." }
 

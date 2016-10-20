@@ -243,6 +243,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token, :company_name, :company_url, :product_or_service_industry, :name, :customer_description, :channel_adress, :facebook_followers, :youtube_followers, :pinterest_followers, :instagram_followers, :other_media_followers, :country, :style, :gender_focus, :viewer_base_description, :design_experience, :total_offline_and_online_audience_marketing_cost)
+      params.require(:user).permit(:email, :category, :checkbox_ticked, :checkbox_text, :confirm_token, :company_name, :company_url, :product_or_service_industry, :name, :customer_description, :channel_adress, :facebook_followers, :youtube_followers, :pinterest_followers, :instagram_followers, :other_media_followers, :country, :style, :gender_focus, :viewer_base_description, :design_experience, :total_offline_and_online_audience_marketing_cost, :humanizer_answer, :humanizer_question_id)
     end
 end
