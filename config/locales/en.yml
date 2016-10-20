@@ -25,6 +25,7 @@ en:
       user:
         email: "E-mail address"
         checkbox_ticked: ""
+        humanizer_answer: ''
     errors:
       models:
         user:
