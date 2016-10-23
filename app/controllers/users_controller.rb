@@ -95,8 +95,6 @@ class UsersController < ApplicationController
       email_activate(@user)
       flash[:success] = "Your email has been confirmed."
       if @user.category == "sponsor"
-              puts @user.email
-
         redirect_to confirmed_email_sponsor_path(:user => @user, :confirm_token => @user.confirm_token)
       elsif @user.category == "host"
         redirect_to confirmed_email_host_path(:user => @user, :confirm_token => @user.confirm_token)
