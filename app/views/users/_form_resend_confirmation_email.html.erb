@@ -1,6 +1,6 @@
 <%= form_for @user, :url => {:action => "resend"}, :html => { :class => "form-horizontal user" }, :remote => true do |f| %>
 
-      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
+      <%= f.text_field :email, :class => 'form-control', :id => 'user_email_resend', :placeholder => 'Email' %>
 
       <%= f.submit 'Resend', :class => 'btn btn-warning' %>
 

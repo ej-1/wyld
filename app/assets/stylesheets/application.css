@@ -296,6 +296,10 @@ ul {
   margin-left: -9em;
 }
 
+#user_email_resend {
+  width: 250px;
+  margin-bottom: 10px !important;
+}
 
 h1 {
   font-family: didot;
@@ -537,7 +541,7 @@ section.features .section-heading {
 @media screen and (min-width: 991px) {
 
   .btn-warning {
-      margin-top: -5px !important;
+
   } 
 
   .confirmation-questionaire-header   {
@@ -594,7 +598,7 @@ section.features .section-heading {
   } 
 
   .btn-warning {
-      margin-top: 10px !important;
+
   }
 
   .header-content {
@@ -639,7 +643,7 @@ section.features .section-heading {
   } 
 
   .btn-warning {
-      margin-top: 10px !important;
+
   } 
 
   .aboutus-text {
@@ -681,7 +685,7 @@ section.features .section-heading {
   } 
 
   .btn-warning {
-      margin-top: 10px !important;
+
   } 
 
   .aboutus-text {
@@ -700,4 +704,11 @@ section.features .section-heading {
     width: 200%;
     max-width: 200%;
   } 
+}
+
+@media only screen and (max-width : 360px) {
+
+  .captcha-field {
+    margin-left: -10px;
+  }
 }
