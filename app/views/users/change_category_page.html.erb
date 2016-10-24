@@ -24,11 +24,11 @@
 
 	  <%= f.hidden_field :confirm_token, :value => @user.confirm_token %>
 
-  <p><%= radio_button("user", "category", "fashionista") %> Fashionista (None of the below)</p>
+  <p><%= radio_button("user", "category", "fashionista") %> Fashionista (interested in watching fashion show streams)</p>
 
   <p><%= radio_button("user", "category", "sponsor") %> Sponsor</p>
 
-  <p><%= radio_button("user", "category", "host") %> Host</p>
+  <p><%= radio_button("user", "category", "host") %> Event Planner</p>
 
   <p><%= radio_button("user", "category", "streamer") %> Streamer</p>
 
