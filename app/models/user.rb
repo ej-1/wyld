@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   require_human_on :create # For captcha
 
   validate :check_email
-	#validates :email, uniqueness: true, uniqueness: { message: "has already been registered." }
+	validates :email, uniqueness: true, uniqueness: { message: "has already been registered." }
 
   validates :checkbox_ticked, presence: true
   validates :category, presence: true # http://stackoverflow.com/questions/13784845/how-would-one-validate-the-format-of-an-email-field-in-activerecord
