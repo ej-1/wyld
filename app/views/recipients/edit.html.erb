@@ -1,0 +1,45 @@
+
+
+<%= form_for @recipient, :class => "form-horizontal-for-admin user" do |f| %>
+
+  <% if @recipient.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@recipient.errors.count, "error") %> prohibited this recipient from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @recipient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  <div>
+
+    </br>
+      <p><%= f.text_field :email %></p>
+    </div>
+    </br>
+      <p><%= f.text_field :name %></p>
+    </div>
+     </br>
+      <p><%= f.text_field :category %></p>
+    </div>
+    </div>
+     </br>
+      <p><%= f.text_field :cold_email_sent %></p>
+    </div>
+  </div>
+
+      <%= f.submit 'Update and Resend email', data: { confirm: 'Are you sure you want to update and send an email?' }, :class => 'btn btn-success btn-ms' %>
+
+<p>To resend email clear the cold_email_sent field and save.</p>
+<p>If you change anything else and save without changing cold_email_sent, then changes will go through without emailing..</p>
+<br>
+<p>You can import the CSV file again. Will not create new records and send email if the email already exists</p>
+
+<% end %>
+
+

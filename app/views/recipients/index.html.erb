@@ -1,0 +1,46 @@
+<h2>Import Email Lists</h2>
+
+<%= form_tag import_recipients_path, multipart: true do %>
+  <%= file_field_tag :file %>
+<br>
+  <%= submit_tag "Import" %>
+<br>
+<% end %>
+
+    <h2>Currently you can email bloggers and designers. NOT sponsors. Only cold emails is configured for each!</h2>
+
+	<div class="page-header">
+	  <h1><%=t '.title', :default => 'Recipients' %></h1>
+	</div>
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Email</th>
+	      <th>Category</th>
+	      <th>Cold email sent?</th>
+	      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% Recipient.all.each do |recipient| %>
+	      <tr>
+	        <td><%= recipient.name unless nil %></td>
+	        <td><%= recipient.email unless nil %></td>
+	        <td><%= recipient.category unless nil %></td>
+	        <td><%= recipient.cold_email_sent unless nil %></td>
+	        <td><%=l recipient.created_at unless nil %></td>
+	        <td>
+            <%= link_to 'Edit', edit_recipient_path(recipient), :class => 'btn btn-default btn-xs' %>
+	          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+	                      recipient_path(recipient),
+	                      :method => :delete,
+	                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+	                      :class => 'btn btn-xs btn-danger' %>
+	        </td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+

@@ -30,6 +30,10 @@ Rails.application.routes.draw do
   post 'resend' => 'users#resend'
   get 'resent_email_confirmation' => 'users#resent_email_confirmation'
 
+  resources :recipients do
+    collection { post :import }
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
