@@ -1,5 +1,5 @@
 class RecipientsController < ApplicationController
-  before_action :authenticate_admin!
+  #before_action :authenticate_admin!
 
   def index
     @recipients = Recipient.all.order('email ASC')
@@ -12,7 +12,7 @@ class RecipientsController < ApplicationController
     #end
 
     Recipient.import(params[:file])
-
+    @recipients = Recipient.all
     @recipients.each do |recipient|
       send_cold_email(recipient)
     end
@@ -47,19 +47,27 @@ class RecipientsController < ApplicationController
 private
 
   def send_cold_email(recipient)
-    if recipient.cold_email_sent != nil and recipient.cold_email_sent.include? 'email sent'
+    @recipient = recipient
+    if @recipient.cold_email_sent != nil and @recipient.cold_email_sent.include? 'email sent'
     else
+      if @recipient.name.include? 'blank'
+        @recipient.name = ''
+        puts @recipient.name
+      else
+         @recipient.name = ' ' + @recipient.name.to_s
+         puts @recipient.name
+      end
 
-      if recipient.category.include? 'blogger'
-        ColdMailer.cold_email_blogger(recipient.email).deliver # It does not care if there is a space " example@mail.com"
-        recipient.update(cold_email_sent: 'email sent as blogger')
+      if @recipient.category.include? 'blogger'
+        ColdMailer.cold_email_blogger(@recipient).deliver # It does not care if there is a space " example@mail.com"
+        @recipient.update(cold_email_sent: 'email sent as blogger')
 
-      elsif recipient.category.include? 'designer'
-        ColdMailer.cold_email_designer(recipient.email).deliver # It does not care if there is a space " example@mail.com"
-        recipient.update(cold_email_sent: 'email sent as designer')
+      elsif @recipient.category.include? 'designer'
+        ColdMailer.cold_email_designer(@recipient).deliver # It does not care if there is a space " example@mail.com"
+        @recipient.update(cold_email_sent: 'email sent as designer')
 
-      elsif recipient.category == nil
-        recipient.update(cold_email_sent: "not sent: didn't specify user category")
+      elsif @recipient.category == nil
+        @recipient.update(cold_email_sent: "not sent: didn't specify user category")
       end
     end
   end
