@@ -92,9 +92,6 @@
                     <li>
                         <a class="page-scroll" href="#download">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#features">Sign up</a>
-                    </li>
                     <% end %>
                     <% if admin_signed_in? %>
                       <li><%= link_to 'Sign out', destroy_admin_session_path, :method=>'delete' %></li>
