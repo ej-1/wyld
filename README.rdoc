@@ -1,28 +1,34 @@
 == README
 
+Checkout the portfolio website here.
+https://arcane-oasis-37368.herokuapp.com
+This is the first version when WYLD a concept for livestreaming. The website might be a bit slow to load because the server needs to wake, since it is hosted on Heroku for free.
+
+The current version which was simplified can be found at the official website.
+http://wyld.events
+
+
+
+WYLD website
+
+Has three different categories of information
+
+- For event planners
+- For blogger and video channel owners wishing to livestream fashion shows to their audiences
+- For sponsors
+
+The website includes
+- Sign-up function with confirmation emails
+- Captchas to verify visitor is human
+- Admin panels
+
+To get the website running
+- Fork the repo
+- Deploy to environment
+- Run 'rake db:migrate'
+- Setup admin details in app
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
