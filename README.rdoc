@@ -1,5 +1,7 @@
 == README
 
+If you're an employer, please ignore the code and just look at the visual design. Very fast built website to explain the WYLD concept.
+
 Checkout the portfolio website here.
 https://arcane-oasis-37368.herokuapp.com
 This is the first version when WYLD a concept for livestreaming. The website might be a bit slow to load because the server needs to wake, since it is hosted on Heroku for free.
